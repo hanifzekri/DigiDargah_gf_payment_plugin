@@ -1445,7 +1445,7 @@ class GF_digidargah_Gateway {
 			'callback' => self::return_url($form['id'], $entry_id)
 		);
 
-		$url = 'https://digidargah.com/action/ws/request_create';
+		$url = 'https://digidargah.com/action/ws/request/create';
 		$ch = curl_init($url);
 		curl_setopt($ch, CURLOPT_POST, true);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
@@ -1549,7 +1549,7 @@ class GF_digidargah_Gateway {
 				'request_id' => $transaction_id
 			);
 			
-			$url = 'https://digidargah.com/action/ws/request_status';
+			$url = 'https://digidargah.com/action/ws/request/status';
 			$ch = curl_init($url);
 			curl_setopt($ch, CURLOPT_POST, true);
 			curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($params));
